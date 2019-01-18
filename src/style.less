@@ -1,14 +1,42 @@
+body{
+  background: #f3f3f4;
+}
 .container{
   display: flex;
   .side{
-    width: 16.667%;
-    min-width: 180px;
+    width: 15%;
+    min-width: 220px;
     height: calc(100vh);
-    background: #404040;
+    background: #2f4050;
     color: #eee;
   }
   .main{
     flex:1;
-    padding: 15px;
+    height: calc(100vh);
+    .content{
+      margin: 20px;
+      padding: 20px;
+      height: calc(100% - 210px);
+      overflow:hidden;
+      background: #fff;
+      .inner{
+        overflow-y:auto;
+      }
+    }
+  }
+  
+  .ant-menu{
+    background:#2f4050;
+    color: #a7b1c2;
+    font-weight: 600;
+    border-right: 0;
+  }
+  .ant-menu .ant-menu-item-selected{
+    background: #293846;
+    color: #fff;
+  }
+  .ant-menu-item:active, .ant-menu-submenu-title:active{
+    background: #293846;
+    color: #fff;
   }
 }

@@ -4,7 +4,12 @@ export default class Header extends Component{
   render(){
     return(
       <div className="header">
-        header
+        <div className="header-top">
+
+        </div>
+        <div className="bread-crumb">
+
+        </div>
       </div>
     )
   }
