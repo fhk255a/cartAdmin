@@ -1,5 +1,5 @@
 import React,{ Component } from 'react'
-import { Menu, Icon, Switch } from 'antd';
+import { Menu } from 'antd';
 import './index.less'
 import menuList from './../../lib/menuList'
 const SubMenu = Menu.SubMenu;
@@ -19,7 +19,7 @@ export default class Side extends Component{
           </SubMenu>
         )
       }
-      return <Menu.Item key={item.key} title={item.title}>{item.title}</Menu.Item>
+      return <Menu.Item key={item.key} title={item.title}><a href={'#'+item.key}>{item.title}</a></Menu.Item>
     })
   }
   changeTheme = (value) => {
@@ -46,8 +46,10 @@ export default class Side extends Component{
           selectedKeys={[this.state.current]}
           mode="inline"
         > 
-          {this.state.menuTreeNodes}
+          
+            {this.state.menuTreeNodes}
         </Menu>
+    
       </div>
     )
   }

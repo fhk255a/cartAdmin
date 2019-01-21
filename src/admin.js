@@ -5,6 +5,8 @@ import './style.less'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Side from './components/Side'
+import Button from './pages/Button'
+import { HashRouter , Route , Switch } from 'react-router-dom'
 export default class Admin extends Component {
     render() {
         return (
@@ -15,9 +17,13 @@ export default class Admin extends Component {
                     </Col>
                     <Col span={21} className="main">
                         <Header/>
-                        <Row className="content">
-                            content
-                        </Row>
+                        <HashRouter>
+                            <Row className="content">
+                                <Switch>
+                                    <Route path="/admin/ui/button" component={Button}></Route>
+                                </Switch>
+                            </Row>
+                        </HashRouter>
                         <Footer/>
                     </Col>
                 </Row>
