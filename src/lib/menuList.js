@@ -12,12 +12,20 @@ export default [
         key:'/admin/ui/button'
       },
       {
+        title:'图标',
+        key:'/admin/ui/icon'
+      },
+      {
         title:'弹框',
         key:'/admin/ui/alert'
       },
       {
         title:'加载',
         key:'/admin/ui/loading'
+      },
+      {
+        title:'表单',
+        key:'/admin/ui/input'
       }
     ]
   },

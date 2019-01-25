@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import 'antd/dist/antd.css'
-import { Row, Col } from 'antd'
+import { Row, Col, Button } from 'antd'
 import './style.less'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Side from './components/Side'
-import Button from './pages/Button'
+import Ui from './pages/ui'
 import { HashRouter , Route , Switch } from 'react-router-dom'
 export default class Admin extends Component {
     render() {
@@ -20,7 +20,8 @@ export default class Admin extends Component {
                         <HashRouter>
                             <Row className="content">
                                 <Switch>
-                                    <Route path="/admin/ui/button" component={Button}></Route>
+                                    <Route path="/admin/ui" component={Ui} />
+                                    <Route path="/admin/user" ></Route>
                                 </Switch>
                             </Row>
                         </HashRouter>
