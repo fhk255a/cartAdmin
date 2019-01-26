@@ -9,6 +9,32 @@ body{
     height: calc(100vh);
     background: #2f4050;
     color: #eee;
+    .side-page{
+      height: 100%;
+      overflow: hidden;
+      .side-main{
+        position: relative;
+        height:calc(100vh - 100px);
+        overflow-x:hidden;
+        overflow-y:auto;
+      }
+      	/*核心代码*/
+      .side-main::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+        height: 4px;
+      }
+      .side-main::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .side-main::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+      /*核心代码*/
+    }
   }
   .main{
     flex:1;
@@ -24,19 +50,30 @@ body{
       }
     }
   }
-  
   .ant-menu{
     background:#2f4050;
     color: #a7b1c2;
     font-weight: 600;
     border-right: 0;
+    .ant-menu-item>a{
+      color: #cacacaad;
+    }
+    .ant-menu-item > a:hover{
+      color: darkgray;
+    }
   }
   .ant-menu .ant-menu-item-selected{
-    background: #293846;
-    color: #fff;
+    background: #445c73;
+    >a{
+      color: #fff;
+    }
+    .ant-menu-item-selected > a, .ant-menu-item-selected > a:hover{
+      color: #fff;
+    }
   }
-  .ant-menu-item:active, .ant-menu-submenu-title:active{
+  .ant-menu-item:active, .ant-menu-submenu:hover{
     background: #293846;
     color: #fff;
   }
 }
+

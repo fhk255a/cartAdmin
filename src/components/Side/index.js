@@ -35,20 +35,22 @@ export default class Side extends Component{
 
   render(){
     return(
-      <div>
+      <div className="side-page">
         <div className="logo">
           <h1>FHK'system</h1> 
         </div>
-        <Menu
-          theme={this.state.theme}
-          onClick={this.handleClick}
-          defaultOpenKeys={['sub1']}
-          selectedKeys={[this.state.current]}
-          mode="inline"
-        > 
-          
-            {this.state.menuTreeNodes}
-        </Menu>
+        <div className="side-main">
+          <Menu
+            theme={this.state.theme}
+            onClick={this.handleClick}
+            defaultOpenKeys={['sub1']}
+            selectedKeys={[this.state.current]}
+            mode="inline"
+          > 
+            
+              {this.state.menuTreeNodes}
+          </Menu>
+        </div>
     
       </div>
     )

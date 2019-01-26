@@ -8,25 +8,75 @@ export default [
     key:'/admin/ui',
     children:[
       {
-        title:'按钮',
-        key:'/admin/ui/button'
+        title:'导航常用功能',
+        key:'/admin/ui/nav',
       },
       {
-        title:'图标',
-        key:'/admin/ui/icon'
+        title:'常用功能',
+        key:'/admin/ui/common/',
+        children:[
+          {
+            title:'图标',
+            key:'/admin/ui/common/icon'
+          },
+          {
+            title:'弹框',
+            key:'/admin/ui/common/alert'
+          },
+          {
+            title:'加载',
+            key:'/admin/ui/common/loading'
+          },
+        ]
       },
       {
-        title:'弹框',
-        key:'/admin/ui/alert'
-      },
-      {
-        title:'加载',
-        key:'/admin/ui/loading'
+        title:'数据功能',
+        key:'/admin/ui/data/',
+        children:[
+          {
+            title:'树状控件',
+            key:'/admin/ui/data/tree'
+          },
+          {
+            title:'表格',
+            key:'/admin/ui/data/table'
+          },
+        ]
       },
       {
         title:'表单',
-        key:'/admin/ui/input'
-      }
+        key:'/admin/ui/form',
+        children:[
+          {
+            title:'按钮',
+            key:'/admin/ui/form/button'
+          },
+          {
+            title:'下拉框 & 级联框',
+            key:'/admin/ui/form/select'
+          },
+          {
+            title:'开关 & 多选框',
+            key:'/admin/ui/form/switch'
+          },
+          {
+            title:'上传功能',
+            key:'/admin/ui/form/upload'
+          },
+          {
+            title:'完整表单',
+            key:'/admin/ui/form/form'
+          }
+        ]
+      },
+      {
+        title:'反馈提示',
+        key:'/admin/ui/message'
+      },
+      {
+        title:'日期 & 日历',
+        key:'/admin/ui/date'
+      },
     ]
   },
   {
